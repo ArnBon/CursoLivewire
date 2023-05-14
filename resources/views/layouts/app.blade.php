@@ -147,12 +147,21 @@
     @livewire('inline-component')
     @livewireScripts --}}
 
-    <livewire:articles/>
-    <livewire:articles.index/>
-    <livewire:users-list/>
-    <livewire:inline/>
-    <livewire:inline-component/>
-    <livewire:scripts/>
+    
+    {{-- @livewire('articles', ['h1' => 'Listado 1']) --}}
+    {{-- <livewire:articles h1="Listado 2"/> --}}
+    
+    {{-- @php
+        ($articles = App\Models\Article::all());
+    @endphp --}}
+    {{-- <livewire:articles :articles="$articles"/> --}}
+     {{-- <livewire:articles/> --}}
+
+     {{ $slot }}
+
+     
+     <livewire:scripts/>
+
 
 
     </body>
