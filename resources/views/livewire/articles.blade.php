@@ -45,7 +45,10 @@
     {{-- @if($show) --}}
         <ul>
             @foreach ($articles as $article)
-            <li>{{ $article->title }}</li>
+            <a href="{{ route('articles.show', $article) }}">
+                {{ $article->title }}
+            </a>
+            <li></li>
             @endforeach
         </ul>
     {{-- @endif --}}
